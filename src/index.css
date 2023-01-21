@@ -1,13 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input{
+    @apply border border-orange-400 rounded-md focus:border-orange-400 focus:outline-orange-400 p-2
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.myUnderLine::after {
+    content: "";
+    margin: 4px auto 0px;
+    display: block;
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background: #ffc778;
+  }
